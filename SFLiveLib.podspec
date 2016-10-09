@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'http://www.joygo.com'
+  s.homepage         = 'https://github.com/nemoleo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lee' => 'nemoleo@yeah.met' }
@@ -30,15 +30,15 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/**/*.h'
-  s.vendored_libraries = 'Pod/Library/*.a'
+  s.source_files = 'SFLiveLib/**/*.h'
+  s.vendored_libraries = 'Library/*.a'
   # s.preserve_paths = ''
   
   # s.resource_bundles = {
   #   'SFLiveLib' => ['SFLiveLib/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/**/*.h'
+  s.public_header_files = 'SFLiveLib/**/*.h'
   s.frameworks = 'UIKit','CoreGraphics','Foundation','AVFoundation','VideoToolbox','AudioToolbox','CoreTelephony','OpenAL'
   s.libraries = 'stdc++','c++','iconv'
 

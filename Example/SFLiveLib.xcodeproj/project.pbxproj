@@ -69,19 +69,6 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>19805023725690596C9D9DB3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_SFLiveLib_Example.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
 		<key>323F91AED47CE415E561A762</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -96,13 +83,6 @@ fi
 			<string>../README.md</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5D0385C149DB63B73A62CF67</key>
-		<dict>
-			<key>fileRef</key>
-			<string>19805023725690596C9D9DB3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>6003F581195388D10070C39A</key>
 		<dict>
@@ -213,7 +193,7 @@ fi
 				<string>6003F590195388D20070C39A</string>
 				<string>6003F592195388D20070C39A</string>
 				<string>6003F58E195388D20070C39A</string>
-				<string>5D0385C149DB63B73A62CF67</string>
+				<string>6F8A98AC69FD56BE8F795ED6</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -298,8 +278,8 @@ fi
 				<string>6003F58F195388D20070C39A</string>
 				<string>6003F591195388D20070C39A</string>
 				<string>6003F5AF195388D20070C39A</string>
-				<string>19805023725690596C9D9DB3</string>
 				<string>D4DC1DE1EFFCB1777F05143C</string>
+				<string>BE96A8B46BE52CB8490E9F83</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1139,6 +1119,13 @@ fi
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
+		<key>6F8A98AC69FD56BE8F795ED6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE96A8B46BE52CB8490E9F83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>80AF07E6225289A5F000C9F1</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1212,6 +1199,19 @@ fi
 			<string>Pods/Target Support Files/Pods-SFLiveLib_Example/Pods-SFLiveLib_Example.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE96A8B46BE52CB8490E9F83</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-SFLiveLib_Example.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>C38EC0A863114FBE724D4A55</key>
 		<dict>
