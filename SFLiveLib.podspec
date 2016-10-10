@@ -31,8 +31,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SFLiveLib/**/*.h'
-  s.vendored_libraries = 'Library/*.a'
-  # s.preserve_paths = ''
+  s.vendored_libraries = 'Library/**/*.a'
+  s.preserve_paths = 'Library/**/*.a'
   
   # s.resource_bundles = {
   #   'SFLiveLib' => ['SFLiveLib/Assets/*.png']
