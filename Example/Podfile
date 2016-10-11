@@ -1,6 +1,6 @@
 #use_frameworks!
 
 target 'SFLiveLib_Example' do
-  pod 'SFLiveLib', :path => '../'
+  pod 'SFLiveLib'
 
 end

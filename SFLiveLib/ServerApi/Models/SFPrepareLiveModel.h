@@ -19,7 +19,7 @@
 
 @end
 
-@interface PrepareLiveResponse : MTLModel<MTLJSONSerializing>
+@interface SFPrepareLiveResponse : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *message;

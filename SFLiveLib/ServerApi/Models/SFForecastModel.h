@@ -32,7 +32,7 @@
 
 @end
 
-@interface ForecastListResponse : MTLModel<MTLJSONSerializing>
+@interface SFForecastListResponse : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *message;

@@ -59,7 +59,7 @@
 
 @end
 
-@interface ApplyAnchorResponse :MTLModel<MTLJSONSerializing>
+@interface SFApplyAnchorResponse :MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger retcode;
 @property (nonatomic, strong) NSString *retmsg;

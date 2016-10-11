@@ -42,6 +42,22 @@
                                     completion:(void(^)(SFAnchorListResponse *response))completion;
 
 /**
+ *  获取主播回放混合列表
+ *
+ *  @param uId        用户ID 用于关注列表
+ *  @param type       列表类型. 最新 推荐 关注
+ *  @param page       分页
+ *  @param pageSize   分页大小
+ *
+ */
++ (NSURLSessionDataTask *)getShowListWithUId:(NSNumber *)uId
+                                         cId:(NSString *)cId
+                                        type:(CategoryType)type
+                                        page:(NSInteger)page
+                                    pageSize:(NSInteger)pageSize
+                                  completion:(void(^)(SFAnchorListResponse *response))completion;
+
+/**
  *  获取回放视频列表接口
  *
  *  @param uId        用户ID
@@ -52,7 +68,7 @@
 + (NSURLSessionDataTask *)getPlayBackListWithUId:(NSNumber *)uId
                                             page:(NSInteger)page
                                         pageSize:(NSInteger)pageSize
-                                      completion:(void(^)(PlayBackListResponse *response))completion;
+                                      completion:(void(^)(SFPlayBackListResponse *response))completion;
 
 /**
  *  获取推荐回放视频列表接口
@@ -63,7 +79,7 @@
  */
 + (NSURLSessionDataTask *)getRecommandPlayBackListWithPage:(NSInteger)page
                                                   pageSize:(NSInteger)pageSize
-                                                completion:(void(^)(PlayBackListResponse *response))completion;
+                                                completion:(void(^)(SFPlayBackListResponse *response))completion;
 
 /**
  *  获取主播详情
@@ -72,7 +88,7 @@
  *
  */
 + (NSURLSessionDataTask *)getAnchorInfoWithAId:(NSString *)aId
-                                    completion:(void(^)(AnchorInfoResponse *response))completion;
+                                    completion:(void(^)(SFAnchorInfoResponse *response))completion;
 
 /**
  *  获取主播热度排行
@@ -105,7 +121,7 @@
 + (NSURLSessionDataTask *)getForcasetListWithAId:(NSNumber *)aId
                                             page:(NSInteger)page
                                         pageSize:(NSInteger)pageSize
-                                      completion:(void(^)(ForecastListResponse *response))completion;
+                                      completion:(void(^)(SFForecastListResponse *response))completion;
 
 /**
  *  搜索主播接口
@@ -276,7 +292,7 @@
  *  @return protocol            直播上传协议
  */
 
-+ (NSURLSessionDataTask *)postPrepareLaunchLive:(NSNumber *)anchorId protocol:(NSString *)protocol completion:(void(^)(PrepareLiveResponse *))completion;
++ (NSURLSessionDataTask *)postPrepareLaunchLive:(NSNumber *)anchorId protocol:(NSString *)protocol completion:(void(^)(SFPrepareLiveResponse *))completion;
 
 
 /**
@@ -286,7 +302,7 @@
  *  @param anchorId             主播ID
  *  @return protocol            直播上传协议
  */
-+ (NSURLSessionDataTask *)getPushUrl:(NSNumber *)anchorId protocol:(NSString *)protocol completion:(void(^)(PrepareLiveResponse *))completion;
++ (NSURLSessionDataTask *)getPushUrl:(NSNumber *)anchorId protocol:(NSString *)protocol completion:(void(^)(SFPrepareLiveResponse *))completion;
 
 /**
  *
@@ -297,7 +313,7 @@
  *  @param talkStatus           0->允许聊天 1->禁言聊天
  *  @param protocol             直播上传协议
  */
-+ (NSURLSessionDataTask *)postStartLive:(NSNumber *)anchorId screenStatus:(NSInteger)screenStatus talkStatus:(NSInteger)talkStatus protocol:(NSString *)protocol completion:(void(^)(PrepareLiveResponse *))completion;
++ (NSURLSessionDataTask *)postStartLive:(NSNumber *)anchorId screenStatus:(NSInteger)screenStatus talkStatus:(NSInteger)talkStatus protocol:(NSString *)protocol completion:(void(^)(SFPrepareLiveResponse *))completion;
 
 /**
  *

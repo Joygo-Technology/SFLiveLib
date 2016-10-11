@@ -20,7 +20,7 @@
 
 + (NSURLSessionDataTask *)getSheildValueWithProject:(NSString *)project ver:(NSString *)ver completion:(void(^)(SFSheildResponse *response))completion;
 
-+ (NSURLSessionDataTask *)getHomeVodArray:(void(^)(PlayBackListResponse *response))completion;
++ (NSURLSessionDataTask *)getHomeVodArray:(void(^)(SFPlayBackListResponse *response))completion;
 
 + (NSURLSessionDataTask *)getTopRankList:(void(^)(SFRankListResponse *response))completion;
 

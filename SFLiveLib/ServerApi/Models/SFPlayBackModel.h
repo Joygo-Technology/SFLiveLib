@@ -32,7 +32,7 @@
 
 @end
 
-@interface PlayBackListModel : MTLModel<MTLJSONSerializing>
+@interface SFPlayBackListModel : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, assign) NSInteger total;
@@ -40,10 +40,10 @@
 
 @end
 
-@interface PlayBackListResponse : MTLModel<MTLJSONSerializing>
+@interface SFPlayBackListResponse : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *message;
-@property (nonatomic, copy) PlayBackListModel *result;
+@property (nonatomic, copy) SFPlayBackListModel *result;
 
 @end

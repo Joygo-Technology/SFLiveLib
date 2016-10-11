@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, ReportType){
 + (NSURLSessionDataTask *)getSearchPlaybackWithKeys:(NSString *)keys
                                           pageIndex:(NSInteger)pageIndex
                                            pageSize:(NSInteger)pageSize
-                                         completion:(void (^)(PlayBackListResponse  *response))completion;
+                                         completion:(void (^)(SFPlayBackListResponse  *response))completion;
 
 /**
  *

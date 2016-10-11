@@ -47,6 +47,8 @@
 
 + (SFLibIMManager *)manager;
 
+- (void)dataBaseInit;
+
 - (void)onRecieveIMMessage:(NSDictionary *)message read:(BOOL)read;
 
 - (NSInteger)getUnReadMsgCount;

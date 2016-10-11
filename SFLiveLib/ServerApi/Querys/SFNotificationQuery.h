@@ -21,7 +21,7 @@
 + (NSURLSessionDataTask *)getMyNotifysWithUId:(NSNumber *)uId
                                          page:(NSInteger)page
                                      pageSize:(NSInteger)pageSize
-                                   completion:(void(^)(NotificationListResponse *response))completion;
+                                   completion:(void(^)(SFNotificationListResponse *response))completion;
 
 + (NSURLSessionDataTask *)setMessageOpenedWithUId:(NSNumber *)uId
                                               mId:(NSInteger)mId

@@ -32,7 +32,7 @@ typedef NS_ENUM(NSUInteger, NotificationType)
 
 @end
 
-@interface NotificationListResponse : MTLModel<MTLJSONSerializing>
+@interface SFNotificationListResponse : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *message;

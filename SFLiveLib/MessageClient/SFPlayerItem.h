@@ -11,10 +11,11 @@
 @interface SFPlayerItem : NSObject
 
 @property(nonatomic,assign) NSInteger userId;//用户id
-@property(nonatomic,strong) NSString *title;//用户id
-@property(nonatomic,assign) BOOL isChange;
-@property(nonatomic,assign) NSInteger location;
-@property(nonatomic,strong) NSString *urlStr;
+@property(nonatomic,strong) NSString *nickname;//用户id
+//@property(nonatomic,assign) BOOL isChange;
+//@property(nonatomic,assign) NSInteger location;
+@property(nonatomic,strong) NSString *url;
+@property(nonatomic,strong) NSString *photo;
 @property(nonatomic,assign) BOOL isAnchor;
 
 - (id)initWithJSONDict:(NSDictionary *)JSONDict;

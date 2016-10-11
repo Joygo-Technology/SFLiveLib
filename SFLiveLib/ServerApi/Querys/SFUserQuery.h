@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger, SMSType)
 @interface SFUserQuery : NSObject
 
 // 根据用户ID获得用户头像URL
-+ (NSString *)getUserAvatorWithId:(NSNumber *)uId;
++ (NSString *)getUserAvatorWithId:(id)uId;
 
 /**
  *  获取手机验证码
@@ -254,7 +254,7 @@ typedef NS_ENUM(NSInteger, SMSType)
 + (NSURLSessionDataTask *)postAnhorApplyForm:(NSDictionary *)fields completion:(void (^)(SFBaseResponse *response))completion;
 
 + (NSURLSessionDataTask *)fetchApplyForAnchor:(NSNumber *)uId
-                                   completion:(void (^)(ApplyAnchorResponse *response))completion;
+                                   completion:(void (^)(SFApplyAnchorResponse *response))completion;
 
 
 + (NSURLSessionDataTask *)deletePlaybackWith:(NSNumber *)uId utc:(NSString *)utc

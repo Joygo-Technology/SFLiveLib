@@ -10,6 +10,8 @@
 #import "SFLibChatItem.h"
 #import "SFLibVideoMessage.h"
 #import "SFUserInfoModel.h"
+#import "SFLibAnchorRoomModel.h"
+#import "SFBaseResponse.h"
 
 typedef NS_ENUM(NSUInteger, MsgCode)
 {
@@ -25,9 +27,16 @@ typedef NS_ENUM(NSUInteger, MsgCode)
     MsgCodeMyManager= 308, //设置/取消场控
     MsgCodeCustomize    = 810, //自定义消息（资本，影票）
     MsgCodeLianMai  = 400, //全局连麦消息
+    MsgCodeAcceptLianMai  = 401, //全局连麦消息
+    MsgCodeDenyLianMai  = 402, //全局连麦消息
+    MsgCodeLianMaiFail  = 403, //连麦失败
+    MsgCodeLianMaiChange  = 404, //连麦人员变更
     MsgCodeShutDown = 405,
     MsgCodeEndLive  = 406, //直播结束
     MsgCodeMute     = 500, //禁言消息
+    MsgCodeMicStatus  = 600, //是否允许抢麦
+    MsgCodeMicSequence  = 601, //麦序变化
+    MsgCodeMicChange  = 602, //开放/停止抢麦消息
     MsgCodeOffline  = 800, //被挤下线
     MsgCodeBlock    = 801, //封号
     MsgCodeKick     = 805, //踢出房间
@@ -86,6 +95,27 @@ typedef enum {
 
 - (void)onReciveGiftMessages:(NSArray *)messages;
 
+//收到连麦消息
+- (void)OnReciveLianMaiMessage:(SFLibInviteLmItem *)inviteLmItem;
+
+//接受连麦消息
+- (void)OnAcceptLianMaiMessage:(SFLibInviteLmItem *)LmItem;
+
+//拒绝连麦消息
+- (void)OnDenyLianMaiMessage:(SFLibInviteLmItem *)LmItem;
+
+//连麦失败消息
+- (void)OnLianMaiFail:(SFLibInviteLmItem *)failInfo;
+
+//直播结束
+- (void)OnReceiveExit:(NSDictionary*)contentDict;
+
+- (void)OnRevMicStopOrOpen:(NSInteger)micStatus;
+
+- (void)OnMicSequenceChange:(NSArray *)contentArray;
+
+- (void)OnLianMaiPersonChanged:(NSArray *)userArray;
+
 - (void)onReciveEndLiveMessages:(NSInteger)watchCount;
 
 - (void)onReciveSetOrCancelManagerMessages:(BOOL)setAdmin;
@@ -112,7 +142,6 @@ typedef enum {
  *  连接状态：1已连接，-1未连接，0连接中
  */
 @property (nonatomic, assign) NSInteger connectStatus;
-@property (nonatomic, retain) NSNumber *roomId;
 @property (nonatomic, assign) BOOL isLogin;
 @property (nonatomic, assign) BOOL isLoginOut;
 
@@ -128,12 +157,12 @@ typedef enum {
 
 - (void)sendPrivateMessage:(NSString *)message uId:(NSNumber *)uId receiverId:(NSNumber *)receiverId;
 
-- (void)sendDanmuMessage:(NSString *)message uId:(NSNumber *)uId roomId:(NSNumber *)roomId completion:(msgCompletion)completion;
+- (void)sendDanmuMessage:(NSString *)message uId:(NSNumber *)uId roomId:(NSNumber *)roomId completion:(void(^)(SFBaseResponse *response))completion;
 
 - (void)sendPraiseCount:(NSInteger)count uId:(NSNumber *)uId receiverId:(NSNumber *)receiverId;
 
 //进入直播间
-- (void)enterLiveRoom:(NSNumber *)roomId completion:(msgCompletion)completion;
+- (void)enterLiveRoom:(NSNumber *)roomId completion:(void(^)(SFLibAnchorRoomResponse *roomResponse))completion;
 
 //退出直播间
 - (void)exitLiveRoom:(NSNumber *)roomId;

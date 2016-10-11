@@ -71,7 +71,7 @@ typedef NS_ENUM(NSUInteger, RelationType){
 
 @end
 
-@interface AnchorInfoResponse : MTLModel<MTLJSONSerializing>
+@interface SFAnchorInfoResponse : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, copy) NSString *message;
