@@ -19,6 +19,7 @@
 #import "SUSearchUserModel.h"
 #import "SUForecastModel.h"
 #import "SUPlaybackInfoModel.h"
+#import "SUColumnModel.h"
 
 @interface SUSClient (LiveQuery)
 
@@ -321,5 +322,27 @@
  获取全部视频
  */
 - (NSNumber *)getAllVideoWithPage:(NSInteger)page pageSize:(NSInteger)pageSize completion:(void(^)(SUVideoListResponse *response, NSError *error))completion;
+
+
+/**
+ 栏目列表
+
+ @param completion 完成回调
+ @return 任务Id
+ */
+- (NSNumber *)getColumnListWithCompletion:(void(^)(SUColumnListResponse *response, NSError *error))completion;
+
+/**
+ 列表
+ 
+ @param uId 目标用户id
+ @param categoryid 栏目id
+ @param page 页数
+ @param pageSize 请求数量
+ @param completion 完后回调
+ @return 任务Id
+ */
+
+- (NSNumber *)getColumnListDataWithUId:(NSNumber *)uId categoryid:(NSNumber *)categoryid page:(NSInteger)page pageSize:(NSInteger)pageSize completion:(void (^)(SUVideoListResponse *response, NSError *error))completion;
 
 @end
