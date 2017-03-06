@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *nickName;
 @property (nonatomic, assign) NSInteger newMsgCount;
 @property (nonatomic, assign) NSTimeInterval utc;
+@property (nonatomic, assign) SUBlackRelation relation;
 
 + (SFLibContactItem*)makeItemWith:(SUUserProfileModel*)userInfo;
 

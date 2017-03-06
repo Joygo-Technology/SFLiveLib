@@ -8,14 +8,6 @@
 
 #import "SUUserInfoModel.h"
 
-typedef NS_ENUM(NSUInteger, SURelationShip)
-{
-    SURelationShipStranger = 0,//陌生人，
-    SURelationShipFans = 1,//他关注了我
-    SURelationShipFocus = 2,//我关注他
-    SURelationShipFriend = 3,//互相关注了
-};
-
 @interface SUUserProfileModel : NSObject
 
 @property (nonatomic, strong) NSNumber* up_id;
@@ -36,8 +28,8 @@ typedef NS_ENUM(NSUInteger, SURelationShip)
 @property (nonatomic, assign) NSInteger fans_count;//粉丝数
 @property (nonatomic, assign) NSInteger focus_count;//关注数
 @property (nonatomic, assign) NSInteger assists_count;//获赞数
-@property (nonatomic, assign) BOOL myfocus;//是否关注了用户
-@property (nonatomic, assign) SURelationShip *relation;
+@property (nonatomic, assign) SURelationShip myfocus;//是否关注了用户
+@property (nonatomic, assign) SUBlackRelation relation;
 @property (nonatomic, assign) NSInteger videos;//视频数量
 
 + (instancetype)transformProfileModel:(id)model;

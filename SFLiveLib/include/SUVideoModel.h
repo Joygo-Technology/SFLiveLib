@@ -35,6 +35,7 @@ typedef NS_ENUM(NSInteger,LiveType)
 @property (nonatomic, copy) NSString *photo;//头像
 @property (nonatomic, strong) NSNumber *catid;
 @property (nonatomic, copy) NSString *catname;
+@property (nonatomic, assign) SUBlackRelation relation;
 
 @property (nonatomic, copy)   NSString *transfromTime; //转换后的时间(扩展属性)
 

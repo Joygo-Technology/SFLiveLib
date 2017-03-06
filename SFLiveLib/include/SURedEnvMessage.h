@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SUResponse.h"
 
 typedef NS_ENUM(NSUInteger, SURedEnvType)
 {
@@ -22,5 +23,6 @@ typedef NS_ENUM(NSUInteger, SURedEnvType)
 @property (nonatomic, assign) SURedEnvType type;
 @property (nonatomic, strong) NSNumber *rpid;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, assign) SUBlackRelation relation;
 
 @end

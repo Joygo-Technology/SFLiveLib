@@ -14,6 +14,8 @@
 #import "SUFansModel.h"
 #import "SUAnchorApplyModel.h"
 #import "SUInvitedUserModel.h"
+#import "SURelationResponse.h"
+#import "SUBlackListModel.h"
 
 @interface SUSClient (UserQuery)
 
@@ -210,7 +212,7 @@ typedef NS_ENUM(NSInteger, SUInfoField)
  @param targetId 目标用户ID
  @return 任务ID
  */
-- (NSNumber *)checkIfFocusUser:(NSNumber *)uId targetId:(NSNumber *)targetId completion:(void (^)(SUResponse *response, NSError *))completion;
+- (NSNumber *)checkIfFocusUser:(NSNumber *)uId targetId:(NSNumber *)targetId completion:(void (^)(SURelationResponse *response, NSError *))completion;
 
 /**
  提交主播申请表
@@ -256,4 +258,27 @@ typedef NS_ENUM(NSInteger, ReportType){
  @return 任务ID
  */
 - (NSNumber *)reportUserWithUId:(NSNumber *)uId targetId:(NSNumber *)targetId reportType:(ReportType)type completion:(void(^)(SUResponse *response, NSError *error))completion;
+
+/**
+ 黑名单列表
+ 
+ @param uId 用户Id
+ @param page 分页
+ @param pageSize 分页大小
+ @param completion 回调
+ @return 任务ID
+ */
+- (NSNumber *)getBlackListWithUId:(NSNumber *)uId page:(NSInteger)page pageSize:(NSInteger)pageSize completion:(void(^)(SUBlackListResponse *response, NSError *error))completion;
+
+/**
+ 拉入，移除黑名单
+ 
+ @param uId 用户ID
+ @param targetId 对象用户ID
+ @param black 是否拉入黑名单 YES:拉入
+ @param completion 回调Block
+ @return 任务ID
+ */
+- (NSNumber *)changeBlackStatusWithUId:(NSNumber *)uId targetId:(NSNumber *)targetId black:(BOOL)black completion:(void(^)(SUResponse *response, NSError *error))completion;
+
 @end

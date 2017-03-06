@@ -7,10 +7,10 @@
 //
 
 #import "SUResponse.h"
-#import "SUUserProfileModel.h"
 
 @interface SURelationResponse : SUResponse
 
-@property (nonatomic, assign) SURelationShip *relation;
+@property (nonatomic, assign) SURelationShip relation;
+@property (nonatomic, assign) SUBlackRelation black;
 
 @end

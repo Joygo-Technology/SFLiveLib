@@ -78,6 +78,24 @@ typedef NS_ENUM(NSInteger, ReturnCode) {
     OTHER = -100,
 };
 
+typedef NS_ENUM(NSUInteger, SURelationShip)
+{
+    SURelationShipStranger = 0,//陌生人，
+    SURelationShipFans = 1,//他关注了我
+    SURelationShipFocus = 2,//我关注他
+    SURelationShipFriend = 3,//互相关注了
+    SURelationShipSelf = 4,//自己
+};
+
+typedef NS_ENUM(NSUInteger, SUBlackRelation)
+{
+    SUBlackRelationStranger = 0,//无关系
+    SUBlackRelationByBlack = 1,//被拉黑
+    SUBlackRelationBlack = 3,//拉黑
+    SUBlackRelationMutalBlack = 4,//互拉
+};
+
+
 @interface SUResponse : NSObject
 
 @property (nonatomic, assign) ReturnCode retcode;

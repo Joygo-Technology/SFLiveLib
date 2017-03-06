@@ -15,8 +15,10 @@
 @property (nonatomic, strong) NSString* photo;
 @property (nonatomic, strong) NSString* sign;//个性签名
 @property (nonatomic, strong) NSString* fans_time;//关系建立的时间
-@property (nonatomic, assign) BOOL focus;//被查询人是否关注此用户
+//@property (nonatomic, assign) BOOL focus;//被查询人是否关注此用户
 @property (nonatomic, assign) BOOL myfocus;//查询人是否关注此用户
+@property (nonatomic, assign) SURelationShip relationship;
+@property (nonatomic, assign) SUBlackRelation relation;
 
 @end
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SFLiveLib'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'A short description of SFLiveLib.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/nemoleo'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lee' => 'nemoleo@yeah.met' }
+  s.author           = { 'lee' => 'nemoleo@yeah.net' }
   s.source           = { :git => 'https://github.com/nemoleo/SFLiveLib.git', :tag => s.version.to_s, :submodules => true }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -48,6 +48,7 @@ TODO: Add long description of the pod here.
   s.dependency 'RHSocketKit', '~> 2.2.1'
   s.dependency 'RHSocketKit/Core', '~> 2.2.1'
   s.dependency 'RHSocketKit/Extend', '~> 2.2.1'
+  s.dependency 'wcs-ios-sdk', '~> 0.1.0'
 
   # s.subspec 'SUSClient' do |ss|
   #   ss.ios.deployment_target = '8.0'

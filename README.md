@@ -22,7 +22,7 @@ pod "SFLiveLib"
 
 ## Author
 
-lee, nemoleo@yeah.met
+lee, nemoleo@yeah.net
 
 ## License
 

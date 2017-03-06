@@ -9,8 +9,9 @@
 #import "SUResponse.h"
 
 typedef NS_ENUM(NSInteger, ColumnType) {
-    ColumnType_Hot = 1,
-    ColumnType_Focus = 2,
+    ColumnType_New = -3,
+    ColumnType_Hot = -1,
+    ColumnType_Focus = -2,
 };
 
 @interface SUColumnModel : NSObject

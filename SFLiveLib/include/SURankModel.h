@@ -24,6 +24,8 @@ typedef NS_ENUM(NSUInteger,RankType)
 @property (nonatomic, copy) NSString* val;
 @property (nonatomic, copy) NSString* photo;
 @property (nonatomic, assign) BOOL isfocus;
+@property (nonatomic, assign) SURelationShip relationship;
+@property (nonatomic, assign) SUBlackRelation relation;
 
 @end
 

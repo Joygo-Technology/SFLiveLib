@@ -20,6 +20,7 @@
 @property (nonatomic, assign) BOOL isanchor;//1=是 0=否
 @property (nonatomic, copy) NSString *sign;//个性签名(暂缺)
 @property (nonatomic, assign) NSInteger online;//在线状态(暂缺)
+@property (nonatomic, assign) SUBlackRelation relation;
 
 @end
 
