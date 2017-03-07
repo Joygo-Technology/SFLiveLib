@@ -48,7 +48,7 @@ TODO: Add long description of the pod here.
   s.dependency 'RHSocketKit', '~> 2.2.1'
   s.dependency 'RHSocketKit/Core', '~> 2.2.1'
   s.dependency 'RHSocketKit/Extend', '~> 2.2.1'
-  s.dependency 'wcs-ios-sdk', '~> 0.1.0'
+  s.dependency 'wcs-ios-sdk'
 
   # s.subspec 'SUSClient' do |ss|
   #   ss.ios.deployment_target = '8.0'
