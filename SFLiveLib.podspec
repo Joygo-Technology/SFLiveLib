@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SFLiveLib'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'A short description of SFLiveLib.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/nemoleo'
+  s.homepage         = 'https://github.com/joygo-tech'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lee' => 'nemoleo@yeah.net' }
-  s.source           = { :git => 'https://github.com/nemoleo/SFLiveLib.git', :tag => s.version.to_s, :submodules => true }
+  s.source           = { :git => 'https://github.com/joygo-tech/SFLiveLib.git', :tag => s.version.to_s, :submodules => true }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
